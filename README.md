@@ -37,17 +37,16 @@ NGINX reverse proxy & Apache, но в контейнерах
     3. В репозитории могут находиться любые дополнительные файлы и папки на ваше усмотрение (например шаблон конфигурационного файла NGINX)
     4. В конечном результате после запуска скрипта необходимо обеспечить приведенную ниже иерархию файлов (допускается как генерация файлов скриптом, так и редактирование уже существующих в репозитории файлов; допускается наличие любых дополнительных файлов и директорий, например web-chain.crt в директории certs):
 
-
-**WORKDIR**				        # script working directory		
-├── **certs**				      # directory with certificates
-│   ├── root.crt		      # root CA certificate
-│   ├── web.crt			      # nginx certificate
-│   └── web.key			      # nginx private key
-├── config				        # parameters file
-├── docker	-compose.yml	# docker compose file
-├── **etc**				        # directory with NGINX config
-│   └── nginx.conf		    # NGINX configuration file
-└── task10_12_2.sh		    # main script file
+    WORKDIR				        # script working directory		
+    ├── certs				    # directory with certificates
+    │   ├── root.crt		    # root CA certificate
+    │   ├── web.crt			    # nginx certificate
+    │   └── web.key			    # nginx private key
+    ├── config				    # parameters file
+    ├── docker	-compose.yml	# docker compose file
+    ├── etc				        # directory with NGINX config
+    │   └── nginx.conf		    # NGINX configuration file
+    └── task10_12_2.sh		    # main script file
 
 Пример файла **config**:
 
