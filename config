@@ -1,0 +1,10 @@
+# Host parameters
+EXTERNAL_IP=10.157.1.14
+HOST_NAME=docker-vm.dlnet.kharkov.com
+
+# Docker parameters
+NGINX_IMAGE="nginx:1.13"
+APACHE_IMAGE="httpd:2.4"
+NGINX_PORT=445
+NGINX_LOG_DIR=/srv/log/nginx
+
