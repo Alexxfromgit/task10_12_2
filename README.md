@@ -37,16 +37,16 @@ NGINX reverse proxy & Apache, но в контейнерах
     3. В репозитории могут находиться любые дополнительные файлы и папки на ваше усмотрение (например шаблон конфигурационного файла NGINX)
     4. В конечном результате после запуска скрипта необходимо обеспечить приведенную ниже иерархию файлов (допускается как генерация файлов скриптом, так и редактирование уже существующих в репозитории файлов; допускается наличие любых дополнительных файлов и директорий, например web-chain.crt в директории certs):
 
-    WORKDIR				        # script working directory		
-    ├── certs				    # directory with certificates
-    │   ├── root.crt		    # root CA certificate
-    │   ├── web.crt			    # nginx certificate
-    │   └── web.key			    # nginx private key
-    ├── config				    # parameters file
-    ├── docker	-compose.yml	# docker compose file
-    ├── etc				        # directory with NGINX config
-    │   └── nginx.conf		    # NGINX configuration file
-    └── task10_12_2.sh		    # main script file
+    WORKDIR				            # script working directory		
+    ├── certs				        # directory with certificates
+    │   ├── root.crt		        # root CA certificate
+    │   ├── web.crt			        # nginx certificate
+    │   └── web.key			        # nginx private key
+    ├── config				        # parameters file
+    ├── docker	-compose.yml	    # docker compose file
+    ├── etc				            # directory with NGINX config
+    │   └── nginx.conf		        # NGINX configuration file
+    └── task10_12_2.sh		        # main script file
 
 Пример файла **config**:
 
@@ -72,7 +72,7 @@ NGINX reverse proxy & Apache, но в контейнерах
         a. Docker compose file v2
     4. Используйте discovery сервис докера для проксирования трафика из контейнера NGINX в контейнер с apache2
     5. Используйте наработки из д/з task6_7 для автоматической генерации сертификатов
-    6. Монтировать тома в докер контейнер можно как из папки проекта (в этом случае вам необходимо корректно определить полный путь к папке проекта), так и из любого другого места (например скрипт создает дополнительные директории в /srv или /etc). Во втором случае убедитесь, что все необходимые файлы также доступны в директории проекта (будет проверяться их наличие).
+    6. Монтировать тома в докер контейнер можно как из папки проекта (в этом случае вам необходимо корректно определить полный    путь к папке проекта), так и из любого другого места (например скрипт создает дополнительные директории в /srv или /etc). Во втором случае убедитесь, что все необходимые файлы также доступны в директории проекта (будет проверяться их наличие).
 
 **Часть 3 - Проверка**
 
